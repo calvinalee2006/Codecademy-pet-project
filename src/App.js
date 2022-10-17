@@ -9,6 +9,9 @@ function App() {
   return (
     <div>
       <Router>
+        <Route path = '/:type/:id'>
+          <PetDetailsPage />
+        </Route>
 
       <Navigation />
       
