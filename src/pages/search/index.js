@@ -9,10 +9,10 @@ import { useLocation } from 'react-router-dom';
 const SearchPage = () => {
 
   // Get the search value from useLocation() here
-  const search = 'REPLACE ME';
+  const {search} = useLocation;
 
   const queryParams = useMemo(() => { 
-    return new URLSearchParams('REPLACE ME');
+    return new URLSearchParams(search);
   }, [search]);
 
   const [pets, setPets] = useState([]);
