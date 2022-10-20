@@ -11,17 +11,28 @@ function App() {
    
     <div>
       <Router>
+      <Navigation />
       <Switch>
-      <HomePage />
+
+      <Route path='/search'>
+    <SearchPage />
+   </Route>
+
+   <Route path="/:type?">
+        <HomePage />
+      </Route>
+     
         <Route path = '/:type/:id'>
           <PetDetailsPage />
         </Route>
-        <Route path="/:type?">
-      
-      </Route>
+
         </Switch>
 
-      <Navigation />
+  
+
+     
+
+      
       
       
       </Router>
