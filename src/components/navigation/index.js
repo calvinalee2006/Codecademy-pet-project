@@ -28,7 +28,6 @@ const Navigation = () => {
         <li key="all">
           {/* This link should have an activeClassName and exact prop */}
           <NavLink
-          exact path ='/'
             to="/"
             activeClassName='nav-link-active'
             className="nav-link"

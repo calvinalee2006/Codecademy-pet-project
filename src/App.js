@@ -11,30 +11,27 @@ function App() {
    
     <div>
       <Router>
+      <Route path ="/:type">
       <Navigation />
-      <Switch>
+      </Route>
 
+      <Switch>
       <Route path='/search'>
     <SearchPage />
    </Route>
 
-   <Route path="/:type?">
-        <HomePage />
-      </Route>
-     
-        <Route path = '/:type/:id'>
+   <Route path = '/:type/:id'>
           <PetDetailsPage />
         </Route>
 
+        <Route path= './pages/pet-details-not-found'>
+        <PetDetailsNotFound />
+      </Route>
+
+   <Route path="/:type?">
+        <HomePage />
+      </Route>
         </Switch>
-
-  
-
-     
-
-      
-      
-      
       </Router>
      
     </div>
